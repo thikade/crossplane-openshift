@@ -1,0 +1,10 @@
+apiVersion: managed.a-it.dev/v1alpha1
+kind: CompositeFoobar
+metadata:
+  name: toms-foo
+spec:
+  parameters:
+    name: foo
+    text: "Hello, Thomas!"
+  compositionRef:
+    name: foobarcomposition  # also default!
