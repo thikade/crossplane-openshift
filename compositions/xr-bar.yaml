@@ -2,6 +2,9 @@ apiVersion: managed.a-it.dev/v1alpha1
 kind: CompositeFoobar
 metadata:
   name: toms-bar
+  labels:
+    managed-by: crossplane
+    foo-type: bar
 spec:
   parameters:
     name: bar

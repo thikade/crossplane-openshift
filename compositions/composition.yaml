@@ -10,9 +10,11 @@ spec:
     apiVersion: managed.a-it.dev/v1alpha1
     kind: CompositeFoobar
   patchSets:
-  - name: metadata
+  - name: copy-metadata-labels
     patches:
     - fromFieldPath: metadata.labels
+      toFieldPath: spec.forProvider.manifest.metadata.labels
+      type: FromCompositeFieldPath
   resources:
     - base:
         apiVersion: kubernetes.crossplane.io/v1alpha2
@@ -37,3 +39,5 @@ spec:
             string:
               type: Format
               fmt: 'crossplane-managed-%s'
+        - type: PatchSet
+          patchSetName: copy-metadata-labels

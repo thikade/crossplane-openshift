@@ -2,6 +2,9 @@ apiVersion: managed.a-it.dev/v1alpha1
 kind: CompositeFoobar
 metadata:
   name: toms-foo
+  labels:
+    managed-by: crossplane
+    customLabel: "was_copied_by_composition"
 spec:
   parameters:
     name: foo
