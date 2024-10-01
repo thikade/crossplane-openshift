@@ -23,7 +23,7 @@ spec:
               apiVersion: v1
               kind: Namespace
               metadata:
-                name: "_" # will be replaced by the name of the Composite
+                name: "_" # will be replaced by the parameters.name of the Composite in the patch below!
                 labels:
                   created-by: "foobar"
           providerConfigRef:

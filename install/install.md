@@ -1,4 +1,7 @@
-curl -sLO https://cli.upbound.io/stable/current/bin/linux_amd64/up
+~~curl -sLO https://cli.upbound.io/stable/current/bin/linux_amd64/up~~
+curl -sL "https://raw.githubusercontent.com/crossplane/crossplane/main/install.sh" | sh
+
+
 
 ```
 oc new-project crossplane-system
